@@ -77,7 +77,7 @@ var country_names = [
 ]
 
 let answer = '';
-let maxWrong = 10;
+let maxWrong = 6;
 let mistakes = 0;
 let guessed = [];
 let wordStatus = null;
@@ -122,14 +122,14 @@ function updateHangmanPicture() {
 
 function checkIfGameWon() {
   if (wordStatus === answer) {
-    document.getElementById('keyboard').innerHTML = 'You Won!!!';
+    document.getElementById('keyboard').innerHTML = <b>'You Won!!!'</b>;
   }
 }
 
 function checkIfGameLost() {
   if (mistakes === maxWrong) {
     document.getElementById('wordSpotlight').innerHTML = 'The answer was: ' + answer;
-    document.getElementById('keyboard').innerHTML = 'You Lost!!!';
+    document.getElementById('keyboard').innerHTML = <b>'You Lost!!!'</b>;
   }
 }
 
